@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>MDB Webpack Starter</title>
+    <!-- Favicon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    />
+    <link rel="stylesheet" href="../css//index.css" />
+ 
+    <style></style>
+  </head>
+  <body>
+    <h2>Lista zakupów</h2>
+    <form class="form">
+      <input type="text" class="product" placeholder="Podaj nazwę produktu">
+      <input type="number" class="amount" placeholder="Podaj ilość">
+      <div class="units">
+        <label><input type="radio" class="unit" name="unit" value="sztuki" checked> Sztuki</label>
+        <label><input type="radio" class="unit" name="unit" value="kilogramy"> Kilogramy</label>
+        <select class="select">
+          <option value="default">Wybierz kategorie</option>
+          <option value="Warzywa">Warzywa</option>
+          <option value="Owoce">Owoce</option>
+          <option value="Nabiał">Nabiał</option>
+          <option value="Pieczywo">Pieczywo</option>
+          <option value="Mięso">Mięso</option>
+          <option value="Higiena">Higiena</option>
+        </select>
+      </div>
+      <input type="submit" value="dodaj" class="submit">
+    </form>
+    <div class = "content"></div>
+    <script type="text/javascript" src="./js/index.min.js"></script>
+    
+</body>
+
+
+</html>
