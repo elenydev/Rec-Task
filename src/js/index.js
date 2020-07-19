@@ -1,3 +1,4 @@
+/* eslint-disable no-multi-assign */
 /* eslint-disable no-unused-vars */
 const container = document.querySelector('.container');
 const amountOfProducts = document.querySelector('.amountOfProducts');
@@ -31,7 +32,8 @@ const addProduct = (e) => {
     addingDeleteListener();
     addingEditListener();
   } else {
-    console.log('fill all fields');
+    // eslint-disable-next-line no-alert
+    alert('Please fill all fields');
   }
 };
 
@@ -47,8 +49,9 @@ const showProducts = () => {
     <div class = "productCard">
       <div class = "productCardName">${product.product}</div>
       ${(() => {
-        if (product.unit === 'sztuki') {
-                    return `<div class="productCardAmount">${product.amount} szt.</div>`;
+            if (product.unit === 'sztuki') {
+          // eslint-disable-next-line indent
+          return `<div class="productCardAmount">${product.amount} szt.</div>`;
         }
         return `<div class="productCardAmount">${product.amount} kg.</div>`;
       })()}
@@ -71,9 +74,11 @@ const productCounter = () => {
   let weightsOfProducts = 0;
   products.forEach((product) => {
     if (product.unit === 'sztuki') {
+      // eslint-disable-next-line radix
       numberOfProducts += parseInt(product.amount);
       amountOfProducts.innerHTML = `${numberOfProducts}szt`;
     } else {
+      // eslint-disable-next-line radix
       weightsOfProducts += parseInt(product.amount);
       weightOfProducts.innerHTML = weightsOfProducts;
     }
@@ -146,7 +151,8 @@ const addEditedProduct = (event) => {
     addingDeleteListener();
     modal.style.display = 'none';
   } else {
-    console.log('fill all fields');
+    // eslint-disable-next-line no-alert
+    alert('Please fill all fields');
   }
 
   addingEditListener();
